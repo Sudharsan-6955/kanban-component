@@ -1,3 +1,7 @@
+/*
+ * © 2025 Sudharsan V. All rights reserved.
+ */
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [

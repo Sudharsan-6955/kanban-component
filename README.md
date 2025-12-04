@@ -1,73 +1,125 @@
-# React + TypeScript + Vite
+🗂️ Kanban Component — React + Storybook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully reusable and modular Kanban Board UI component built with React and documented using Storybook.
+This component supports drag-and-drop functionality, customizable columns, dynamic card rendering, and can be integrated into any frontend project that requires task management or workflow visualization.
 
-Currently, two official plugins are available:
+🔗 Live Storybook Demo: https://kanban-component-sigma.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 GitHub Repository: https://github.com/Sudharsan-6955/kanban-component
 
-## React Compiler
+✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🟥 Dynamic Kanban Columns — Add/edit columns easily using props
 
-## Expanding the ESLint configuration
+🟦 Drag & Drop Support — Move cards between columns smoothly
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🟩 Reusable Architecture — Component can be used in any project
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
+📦 Modular File Structure — Clean, scalable, and easy to maintain
+
+📘 Storybook Integration
+
+Shows all UI states
+
+Demonstrates interactions
+
+Useful for testing and documentation
+
+⚡ Fully Responsive UI
+
+🔧 Easy Local Setup
+
+🚀 Technologies Used
+
+React
+
+TypeScript
+
+Storybook
+
+CSS Modules / Plain CSS
+
+Vercel (Deployment)
+
+🛠️ Installation & Local Setup
+
+Follow these steps to run the project locally:
+
+git clone https://github.com/Sudharsan-6955/kanban-component
+cd kanban-component
+npm install
+npm run storybook
+
+
+This will start Storybook on http://localhost:6006/.
+
+📚 Component Usage Example
+import { KanbanBoard } from "./components/KanbanBoard";
+
+const columns = [
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+    id: "todo",
+    title: "To Do",
+    cards: [{ id: "1", title: "Task 1" }],
   },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+    id: "in-progress",
+    title: "In Progress",
+    cards: [{ id: "2", title: "Task 2" }],
   },
-])
-```
+  {
+    id: "done",
+    title: "Done",
+    cards: [],
+  },
+];
+
+export default function App() {
+  return <KanbanBoard columns={columns} />;
+}
+
+
+This is just an example — your real structure may differ depending on your component.
+
+🧪 Storybook Documentation
+
+Every UI state of the Kanban component is documented in Storybook:
+
+Default view
+
+Multiple columns
+
+Drag-and-drop interactions
+
+Empty column state
+
+Card hover/focus
+
+Custom column/card data
+
+Storybook ensures that the component can be visually tested and verified easily.
+
+🌐 Deployment
+
+The Storybook build is deployed on Vercel for easy access and review.
+All stories load correctly and reflect exact component behavior.
+
+🔗 Live Demo: https://kanban-component-sigma.vercel.app/
+
+👨‍💻 Project Purpose
+
+This project was created as part of the Internshala Frontend Assignment to demonstrate:
+
+Component reusability
+
+UI documentation through Storybook
+
+Clean architecture
+
+Interaction-based UI development
+
+Deployment & testing workflow
+
+📝 License
+
+This project is open-source and available under the MIT License.

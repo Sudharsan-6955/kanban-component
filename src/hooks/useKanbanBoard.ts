@@ -1,3 +1,7 @@
+/*
+ * © 2025 Sudharsan V. All rights reserved.
+ */
+
 import { useState, useEffect, useCallback } from 'react';
 import type { BoardState, KanbanTask } from '../components/KanbanBoard/KanbanBoard.types';
 import { createTask } from '../utils/task.utils';

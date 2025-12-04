@@ -1,3 +1,7 @@
+/*
+ * © 2025 Sudharsan V. All rights reserved.
+ */
+
 import KanbanBoard from './components/KanbanBoard/KanbanBoard';
 
 export default function App() {
@@ -17,8 +21,17 @@ export default function App() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
-        <KanbanBoard className="h-[calc(100vh-140px)] sm:h-[calc(100vh-160px)] md:h-[calc(100vh-180px)]" />
+        <KanbanBoard className="h-[calc(100vh-140px)] sm:h-[calc(100vh-160px)] md:h-[calc(100vh-200px)]" />
       </main>
+
+      {/* Footer */}
+      <footer className="hidden md:block bg-white border-t border-neutral-200 mt-auto">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4">
+          <p className="text-xs md:text-sm text-neutral-600 text-center">
+            © 2025 <span className="font-semibold text-neutral-800">Sudharsan V</span>. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

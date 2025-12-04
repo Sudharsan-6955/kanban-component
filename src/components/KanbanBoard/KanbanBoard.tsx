@@ -1,3 +1,7 @@
+/*
+ * © 2025 Sudharsan V. All rights reserved.
+ */
+
 import React, { useState, useMemo } from 'react';
 import { DndContext, DragOverlay } from '@dnd-kit/core';
 import type { BoardState, KanbanTask } from './KanbanBoard.types';

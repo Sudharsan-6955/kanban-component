@@ -52,3 +52,24 @@ export const Small: Story = {
     label: 'Button',
   },
 };
+
+export const KanbanstoryBook: Story = {
+  args: {
+    primary: true,
+    label: "Button"
+  }
+};
+
+export const Kanban: Story = {
+  args: {
+    primary: true,
+    label: "Button"
+  }
+};
+
+export const False: Story = {
+  args: {
+    primary: true,
+    label: "Button"
+  }
+};
